@@ -1,5 +1,5 @@
 #include <iostream> 
-#
+#include <fstream>
 using namespace std; 
 
 int josephus(int n, int k) 
@@ -17,8 +17,20 @@ int josephus(int n, int k)
 // Driver Program to test above function 
 int main() 
 { 
-	int n, k; cin >> n >> k;
-	cout <<  josephus(n, k) << endl; 
+	ofstream fout;
+	fout.open("test");
+	ofstream ff;
+	ff.open("sol");
+	fout << (4000-1)*99 << endl;
+	for (int i=2; i<=4000; ++i){
+		for (int j=2; j<=100; ++j){
+			fout << i << " " << j << endl;
+			ff << josephus(i, j) << endl;
+		}
+	}
+	fout.close();
+	ff.close();
+
 	return 0; 
 } 
 

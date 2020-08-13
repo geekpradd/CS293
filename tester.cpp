@@ -22,10 +22,14 @@ long long J(long long n, long long k){
 }
 
 int main(){
-	long long n; long long k; 
-	cin >> n;
-	cin >> k;
-	long long ans = J(n, k) + 1;
-	cout << ans << endl;
+	int t; cin >> t;
+	while (t--){
+		long long n; long long k; 
+		cin >> n;
+		cin >> k;
+		long long ans = J(n, k) + 1;
+		cout << ans << endl;
+	}
+	
 	return 0;
 }
