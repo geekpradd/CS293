@@ -5,7 +5,7 @@ k = 100
 
 second = ""
 for _ in range(k):
-	num = random.randint(1000, 6000)
+	num = random.randint(1, 1000)
 	s += num
 	second += str(num) + " "
 
